@@ -14,6 +14,8 @@
 		4B4709891CC4BE3A00C43947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4709871CC4BE3A00C43947 /* LaunchScreen.storyboard */; };
 		4B4709941CC4BE3A00C43947 /* MusicPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4709931CC4BE3A00C43947 /* MusicPlayerTests.swift */; };
 		4B47099F1CC4BE3A00C43947 /* MusicPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47099E1CC4BE3A00C43947 /* MusicPlayerUITests.swift */; };
+		4B4709AD1CC4C2CD00C43947 /* Dhushta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B4709AC1CC4C2CD00C43947 /* Dhushta.mp3 */; };
+		4B4709AF1CC4EFA200C43947 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4709AE1CC4EFA200C43947 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4B47099A1CC4BE3A00C43947 /* MusicPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B47099E1CC4BE3A00C43947 /* MusicPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUITests.swift; sourceTree = "<group>"; };
 		4B4709A01CC4BE3A00C43947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B4709AC1CC4C2CD00C43947 /* Dhushta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dhushta.mp3; sourceTree = "<group>"; };
+		4B4709AE1CC4EFA200C43947 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4709AF1CC4EFA200C43947 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		4B4709721CC4BE3900C43947 = {
 			isa = PBXGroup;
 			children = (
+				4B4709AE1CC4EFA200C43947 /* AVFoundation.framework */,
 				4B47097D1CC4BE3900C43947 /* MusicPlayer */,
 				4B4709921CC4BE3A00C43947 /* MusicPlayerTests */,
 				4B47099D1CC4BE3A00C43947 /* MusicPlayerUITests */,
@@ -97,6 +103,7 @@
 		4B47097D1CC4BE3900C43947 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				4B4709AC1CC4C2CD00C43947 /* Dhushta.mp3 */,
 				4B47097E1CC4BE3900C43947 /* AppDelegate.swift */,
 				4B4709801CC4BE3900C43947 /* ViewController.swift */,
 				4B4709821CC4BE3A00C43947 /* Main.storyboard */,
@@ -193,6 +200,7 @@
 				TargetAttributes = {
 					4B47097A1CC4BE3900C43947 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = KK9M26HDPV;
 					};
 					4B47098E1CC4BE3A00C43947 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -229,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4709AD1CC4C2CD00C43947 /* Dhushta.mp3 in Resources */,
 				4B4709891CC4BE3A00C43947 /* LaunchScreen.storyboard in Resources */,
 				4B4709861CC4BE3A00C43947 /* Assets.xcassets in Resources */,
 				4B4709841CC4BE3A00C43947 /* Main.storyboard in Resources */,
@@ -399,10 +408,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MusicPlayer",
+				);
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sridama.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +427,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MusicPlayer",
+				);
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sridama.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -484,6 +509,7 @@
 				4B4709A51CC4BE3A00C43947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B4709A61CC4BE3A00C43947 /* Build configuration list for PBXNativeTarget "MusicPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +518,7 @@
 				4B4709A81CC4BE3A00C43947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B4709A91CC4BE3A00C43947 /* Build configuration list for PBXNativeTarget "MusicPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +527,7 @@
 				4B4709AB1CC4BE3A00C43947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
